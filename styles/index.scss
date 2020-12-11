@@ -1,0 +1,100 @@
+@import "variables";
+@import "null";
+@import "breakpoints";
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap");
+body {
+	font-size: 16px;
+	color: #11223f;
+}
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+}
+._container {
+	width: 81%;
+	margin: 0 auto;
+	padding: 0 10px;
+	@include br {
+		width: 100%;
+		max-width: 1140px;
+	}
+}
+section {
+	@include br {
+		margin: 120px 0 0;
+	}
+}
+
+.btn {
+	height: 50px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 20px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	text-shadow: 0px 10px 40px rgba(25, 104, 252, 0.2);
+	background: #1968fc;
+	box-shadow: 0px 10px 40px rgba(25, 104, 252, 0.3);
+	padding: 0 25px;
+	&._wide {
+		max-width: 300px;
+	}
+	._desk {
+		display: none;
+		@include br {
+			display: inline;
+		}
+	}
+	._mob {
+		display: inline;
+		@include br {
+			display: none;
+		}
+	}
+}
+
+.bg {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	@include br {
+		display: block;
+	}
+}
+.bg-mob {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	@include br {
+		display: none;
+	}
+}
+.main {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+@import "header-page";
+@import "headline";
+@import "reviews";
+@import "workflow";
+@import "features";
+@import "users";
+@import "purposes";
+@import "consultation";
+@import "stories";
+@import "page-footer";

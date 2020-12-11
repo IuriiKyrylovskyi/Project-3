@@ -1,0 +1,120 @@
+.workflow {
+	margin-top: 70px;
+}
+.cascade {
+	&__title {
+		font-size: 30px;
+		line-height: 60px;
+		text-transform: uppercase;
+		margin: 0 -10px 60px;
+		position: relative;
+		@include br {
+			margin: 0 0px 50px;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			width: 80px;
+			height: 2px;
+			left: 0px;
+			top: 125%;
+			background: #1968fc;
+			@include br {
+				transform: translateX(-50%);
+			}
+		}
+	}
+
+	&__row {
+		margin: 0 -30px;
+		display: flex;
+		flex-direction: column;
+		@include br {
+			margin: 0 -10px;
+			flex-direction: row;
+			justify-content: space-between;
+			min-height: 340px;
+		}
+	}
+}
+.workflow-step {
+	padding: 40px;
+	background-color: #fff;
+	box-shadow: $bs;
+	position: relative;
+	margin: 20px;
+	@include br {
+		flex: 0 1 320px;
+		width: 320px;
+		margin: 20px 10px;
+		&:nth-child(1) {
+			align-self: start;
+		}
+		&:nth-child(2) {
+			align-self: center;
+		}
+		&:nth-child(3) {
+			align-self: flex-end;
+		}
+	}
+	&:not(:last-child) {
+		&:before {
+			content: "";
+			position: absolute;
+			width: 1px;
+			height: 39px;
+			left: 60px;
+			top: 100%;
+			border: 1px dashed #1968fc;
+			@include br {
+				width: 80px;
+				height: 1px;
+				left: 100%;
+				top: 50%;
+			}
+		}
+	}
+	&__top-box {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__suptitle {
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 20px;
+		text-transform: uppercase;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 40px;
+		text-transform: uppercase;
+		color: #1967fa;
+		margin-bottom: 10px;
+		@include br {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__title-img {
+		max-width: 100%;
+		height: 40px;
+		margin-bottom: 10px;
+		margin-left: 10px;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 30px;
+	}
+
+	&__corner-img {
+		position: absolute;
+		bottom: -5px;
+		right: -5px;
+		z-index: 1;
+	}
+}

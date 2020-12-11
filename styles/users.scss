@@ -1,0 +1,56 @@
+.users {
+	margin: 95px 0 60px;
+	@include br {
+		margin: 105px 0 40px;
+	}
+	&__container {
+		@include br {
+			padding: 0 30px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 40px -20px;
+	}
+}
+._desk {
+	display: none;
+	@include br {
+		display: block;
+	}
+}
+._mob {
+	display: block;
+	@include br {
+		display: none;
+	}
+}
+
+.user {
+	flex: 1 0 calc(50% - 20px);
+	padding: 20px;
+	margin: 10px;
+	background-color: #ffffff;
+	box-shadow: $bs;
+	@include br {
+		flex: 0 0 calc(33.333% - 20px);
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 40px;
+		text-transform: uppercase;
+		color: #1967fa;
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 30px;
+	}
+}
